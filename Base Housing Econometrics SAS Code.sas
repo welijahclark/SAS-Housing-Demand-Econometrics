@@ -74,8 +74,8 @@ run;
 
 /*Note: PtoH is a ratio of the population of an area to housing units in an area, while HtoP is number of housing units per person 
 in an area. My hunch is that HtoP would be a better metric, but I don't actually know which will be better (or if it even makes a 
-notable difference, for that matter). It doesn't fit the standard concept of price elasticity in economics, but it would make sense
-regardless.*/
+notable difference, for that matter). It doesn't fit the standard concept of price elasticity in economics, but it could be used to account 
+for population density*/
 
 proc reg data=Housing;
 model rent50_0=PtoH;
@@ -135,7 +135,7 @@ proc transreg data=HUDdata;
 model boxcox(rent50_2)=identity(hu2017);
 run;
 
-/*Hmm. All of these suggest a transform of -0.75, so...let's go back up and add that into the data, I suppose.*/
+/*Hmm. All of these suggest a transform of -0.75, so...let's go back up and add that transformation into the data...*/
 
 
 proc reg data=Housing;
