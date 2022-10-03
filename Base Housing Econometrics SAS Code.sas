@@ -1,7 +1,5 @@
 /*William-Elijah Clark wec19b STA 3064 Project A Code*/
 
-/*I hereby certify that the following SAS code is my own original work*/
-
 /** FOR CSV Files uploaded from Windows **/
 
 FILENAME CSV "/home/u49665201/sasuser.v94/STA3064/Copy 2 of FY2021_50_County.csv" TERMSTR=CRLF;
